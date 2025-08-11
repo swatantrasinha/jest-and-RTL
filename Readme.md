@@ -15,4 +15,22 @@ This is course for learning how to write testcase using jest and RTL.
 
 Refer to : [jest Docs](https://jestjs.io/docs/api)
 
+<ins>sum.ts</ins>
+
+```javascript
+export const sum  = (a:number ,b: number) => a+b
+```
+
+<ins>sum.test.ts</ins>
+```javascript
+import { sum } from "./sum";
+
+test('testing for sum function', () => {
+    const input1= 2
+    const input2= 3
+    const output= 5
+    expect(sum(input1, input2)).toBe(output)   
+})
+```
+
 
