@@ -42,6 +42,48 @@ test('testing for sum function', () => {
 
 <details>
     <summary> <ins>Lecture 04: Understand React Test Structure </ins> </summary>
+    <img width="684" height="348" alt="image" src="https://github.com/user-attachments/assets/9fe79f92-f1c1-4169-a3a4-6a6c7e71cf5c" />
+
+    
+<ins>App.tsx</ins>
+
+    ```javascript
+    function App() {
+      return (
+        <>
+          <h1>Learn React</h1>
+          <p>Code Step By Step</p>  
+        </>
+      )
+    }
+
+    export default App
+    ```
+
+  <ins>App.test.tsx</ins>
+
+  ```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom';
+
+import App from '../App'
+
+test('renders learn react link', () => {
+  render(<App />)
+  // screen.logTestingPlaygroundURL()
+  const linkElement = screen.getByText(/Learn React/i)
+  expect(linkElement).toBeInTheDocument()
+})
+
+test('renders learn react link', () => {
+  render(<App />)
+  // screen.logTestingPlaygroundURL()
+  const paraElement = screen.getByText(/Code Step By Step/i)
+  expect(paraElement).toBeInTheDocument()
+})
+```
+    
+
     
 </details>
 
