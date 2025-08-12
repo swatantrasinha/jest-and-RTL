@@ -89,11 +89,44 @@ test('renders learn react link', () => {
     <summary> <ins>Lecture 05: Write First React Testcase </ins> </summary>
      <img width="681" height="383" alt="image" src="https://github.com/user-attachments/assets/f427770e-6ff8-4608-9732-383c8f0c2227" />
 <p>
-    <ins>App.tsx</ins>
-        
-</p>
-
+    <ins>Lec05_Comp.tsx</ins>
     
+    ```javascript
+        const Lec05_Comp = () => {
+          return (
+            <div>
+                <p>First React Test Case</p>
+                <img src="https://googlechrome.github.io/samples/picture-element/images/butterfly.webp" title="butterfly" /> 
+            </div>
+      )
+    }
+
+    export default Lec05_Comp      
+    ```    
+</p>
+<p>
+ <ins>Lec05_Comp.test.tsx</ins>
+    
+     ```javascript
+                import { render, screen } from "@testing-library/react"
+        import '@testing-library/jest-dom'
+        import Lec05_Comp from "./Lec05_Comp"
+
+
+        test('Test First React App', () => {
+            render(<Lec05_Comp />)
+            screen.logTestingPlaygroundURL()
+            const requiredText = screen.getByText(/First React Test Case/i)
+            const imgTitle = screen.getByTitle('butterfly')
+            expect(requiredText).toBeInTheDocument()
+            expect(imgTitle).toBeInTheDocument()
+          })
+     ```
+    
+</p>
 </details>
 
+<details>
+    <summary> <ins>Lecture 06: Test Input box </ins> </summary>
+</details>    
 
