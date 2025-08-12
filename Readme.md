@@ -88,8 +88,11 @@ test('renders learn react link', () => {
 <details>
     <summary> <ins>Lecture 05: Write First React Testcase </ins> </summary>
      <img width="681" height="383" alt="image" src="https://github.com/user-attachments/assets/f427770e-6ff8-4608-9732-383c8f0c2227" />
-    
+<p>
     <ins>App.tsx</ins>
+        
+</p>
+
     
 </details>
 
