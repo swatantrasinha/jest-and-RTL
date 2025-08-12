@@ -47,7 +47,7 @@ test('testing for sum function', () => {
     
 <ins>App.tsx</ins>
 
-    ```javascript
+```javascript
     function App() {
       return (
         <>
@@ -58,7 +58,7 @@ test('testing for sum function', () => {
     }
 
     export default App
-    ```
+```
 
   <ins>App.test.tsx</ins>
 
@@ -91,7 +91,7 @@ test('renders learn react link', () => {
 <p>
     <ins>Lec05_Comp.tsx</ins>
     
-    ```javascript
+```javascript
         const Lec05_Comp = () => {
           return (
             <div>
@@ -102,13 +102,14 @@ test('renders learn react link', () => {
     }
 
     export default Lec05_Comp      
-    ```    
+```    
 </p>
 <p>
  <ins>Lec05_Comp.test.tsx</ins>
     
-     ```javascript
-                import { render, screen } from "@testing-library/react"
+```javascript
+     
+        import { render, screen } from "@testing-library/react"
         import '@testing-library/jest-dom'
         import Lec05_Comp from "./Lec05_Comp"
 
@@ -121,12 +122,53 @@ test('renders learn react link', () => {
             expect(requiredText).toBeInTheDocument()
             expect(imgTitle).toBeInTheDocument()
           })
-     ```
+```
     
 </p>
 </details>
 
 <details>
     <summary> <ins>Lecture 06: Test Input box </ins> </summary>
+    <img width="646" height="543" alt="image" src="https://github.com/user-attachments/assets/d9490e07-455f-4ea4-b018-62c0081317a5" />
+    
+<p>
+    <ins>Lec06_Comp.tsx</ins>
+    
+```javascript
+        const Lec06_Comp = () => {
+          return (
+            <div>
+              <input type='text' placeholder='Enter Username' name='username' id='user-id' />
+            </div>
+          )
+        }
+
+    export default Lec06_Comp
+```
+
+<ins>Lec06_Comp.test.tsx</ins>
+
+```javascript
+    import { render, screen } from "@testing-library/react"
+    import '@testing-library/jest-dom'
+    import Lec06_Comp from "./Lec06_Comp"
+
+
+    test('Test First React App', () => {
+        render(<Lec06_Comp />)
+        // screen.logTestingPlaygroundURL()
+        const checkInput = screen.getByRole('textbox')
+        expect(checkInput).toBeInTheDocument()
+        const checkInputPlaceholder = screen.getByPlaceholderText('Enter Username')
+        expect(checkInputPlaceholder).toBeInTheDocument()
+        expect(checkInput).toHaveAttribute('name', 'username')
+        expect(checkInput).toHaveAttribute('id', 'user-id')
+        expect(checkInput).toHaveAttribute('type', 'text')
+      })
+
+```
+
+</p>
+
 </details>    
 
