@@ -167,13 +167,16 @@ test('renders learn react link', () => {
       })
 
 ```
-
 </p>
 
 </details>    
 
 
 <details>
+<summary> <ins> Lec 07: Test Case Run Options </ins></summary>
+<p>
+    
+</p>
     
 </details>
 
