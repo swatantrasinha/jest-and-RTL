@@ -175,10 +175,16 @@ test('renders learn react link', () => {
 <details>
     <summary> <ins> Lec 07: Test Case Run Options </ins></summary>
     <img width="646" height="462" alt="image" src="https://github.com/user-attachments/assets/70918507-e9e7-483b-ac2e-6816f79aadf5" />
-
 <p>
-    
+        
+When we give below command in watch mode :    
+
+> npm test -- --watch
+
+It shows options like   
+<img width="374" height="116" alt="image" src="https://github.com/user-attachments/assets/e3d029dd-fe5f-42ef-8f5a-2da223aa6b55" />
+
 </p>
-    
+
 </details>
 
