@@ -191,9 +191,23 @@ It shows options like
 
 
 <details>
-    <summary> <ins> Lec 08: Test grouping with describe function </ins></summary>
-    <p>
-        <img width="638" height="406" alt="image" src="https://github.com/user-attachments/assets/4acc47de-5b66-47c1-a7f6-745b0c8fd9d6" />
-    </p>
+<summary> <ins> Lec 08: Test grouping with describe function </ins></summary>
+<p>
+<img width="638" height="406" alt="image" src="https://github.com/user-attachments/assets/4acc47de-5b66-47c1-a7f6-745b0c8fd9d6" />   
+    
+<ins>How to group test cases ?</ins>   
+
+<img width="725" height="644" alt="image" src="https://github.com/user-attachments/assets/f0767c89-4872-4c66-bfd3-0eb6213c0060" />
+
+<in>Note: </ins> 
+
+- decribe.only --> will only runs the test cases inside this describe   
+
+- decribe.skip --> will skip all the test cases inside this describe
+  
+- nested describe --> if test cases inside a describe grouping is too much we can group them with nested describe 
+
+    
+</p>
 </details>
 
