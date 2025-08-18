@@ -188,3 +188,12 @@ It shows options like
 
 </details>
 
+
+
+<details>
+    <summary> <ins> Lec 08: Test grouping with describe function </ins></summary>
+    <p>
+        <img width="638" height="406" alt="image" src="https://github.com/user-attachments/assets/4acc47de-5b66-47c1-a7f6-745b0c8fd9d6" />
+    </p>
+</details>
+
