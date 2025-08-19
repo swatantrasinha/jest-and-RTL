@@ -324,12 +324,44 @@ test('click event testing', () => {
   
 - afterAll: executed once after exection all the testcases
   
-- afterEach: executed each time after exection of every testcase
-  
-
-
- 
+- afterEach: executed each time after exection of every testcase   
     
 </p>
 </details>
+
+<details>
+<summary> <ins> Lec 13: Snapshot Testing | update Snapshots </ins></summary>
+<p> 
+<img width="835" height="544" alt="image" src="https://github.com/user-attachments/assets/01360122-b305-4e66-9b20-ac540cff96cf" />   
+
+```javascript
+import App from "../App";
+import { render } from "@testing-library/react";
+
+test('snapshot for App component', () => {
+    const container = render(<App />)
+    expect(container).toMatchSnapshot()
+})
+```
+
+when we run above test case file   
+
+> yarn run test Lec12_Comp.test.tsx
+
+it will show in terminal that - 1 snapshot is created   
+<img width="618" height="241" alt="image" src="https://github.com/user-attachments/assets/3a119c0a-df42-4d93-8c91-90c7f03b0077" />   
+
+In App.tsx if we change something say :
+~Learn React JS</h1>~   
+to below:
+Learn React JS with typescript   
+
+and then again run test case :    
+
+> yarn run test Lec12_Comp.test.tsx
+
+
+</p>
+</details>
+
 
