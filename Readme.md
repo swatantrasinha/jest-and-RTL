@@ -207,7 +207,63 @@ It shows options like
   
 - nested describe --> if test cases inside a describe grouping is too much we can group them with nested describe 
 
-    
+</p>
+</details>
+
+
+<details>
+<summary> <ins> Lec 09: Test on change event | event fire </ins></summary>
+<p>   
+<img width="640" height="366" alt="image" src="https://github.com/user-attachments/assets/a2ddae13-f1e3-4797-99af-82a9fa2fdef7" />   
+
+<ins>Lec09_Comp.tsx</ins>
+
+```javascript
+import { useState } from 'react'
+
+const Lec09_Comp = () => {
+    const [data, setdata] = useState("")
+  return (
+    <div>
+        <h1>Test onChange Event with Input Textbox</h1>
+        <div>
+            <input type="text" value={data} onChange={(e) => setdata(e?.target?.value)} />
+        </div>
+    </div>
+  )
+}
+export default Lec09_Comp
+```
+
+<ins>Lec09_Comp.test.tsx</ins>
+
+```javascript
+import {fireEvent, render, screen} from '@testing-library/react'
+import Lec09_Comp from "./Lec09_Comp";
+
+
+test('onChange event testing', () => {
+    render(<Lec09_Comp/>)
+    const input:HTMLInputElement= screen.getByRole('textbox')
+    fireEvent.change(input, {target:{value:'abc'}})
+    expect(input?.value).toBe('abc')
+})
+```
+
+</p>
+</details>
+
+
+<details>
+<summary> <ins> Lec 10: Click event test case with button | event fire </ins></summary>
+<p> 
+<img width="646" height="357" alt="image" src="https://github.com/user-attachments/assets/b9fe95d4-4117-44bc-9d53-47a25e963ca4" />
+
+<ins>Lec10_Comp.tsx</ins>
+
+
+<ins>Lec10_Comp.test.tsx</ins>
+
 </p>
 </details>
 
