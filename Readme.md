@@ -307,6 +307,13 @@ test('click event testing', () => {
 
 2. if we create a folder with name  "__tests__", then all files within this folder will be considered as testcase file even if its only .js (need not to be .test or .spec )
   
+</details>
 
+
+<details>
+<summary> <ins> Lec 12: beforeEach | beforeAll | afterAll | afterEach hooks </ins></summary>
+<p> 
+    
+</p>
 </details>
 
