@@ -346,19 +346,34 @@ test('snapshot for App component', () => {
 
 when we run above test case file   
 
-> yarn run test Lec12_Comp.test.tsx
+> yarn run test Lec12_Comp.test.tsx   
 
-it will show in terminal that - 1 snapshot is created   
+
+It will show in terminal that - 1 snapshot is created as below:   
+
 <img width="618" height="241" alt="image" src="https://github.com/user-attachments/assets/3a119c0a-df42-4d93-8c91-90c7f03b0077" />   
 
-In App.tsx if we change something say :
+
+In App.tsx if we change something say :   
+
 ~Learn React JS</h1>~   
-to below:
+to below:   
+
 Learn React JS with typescript   
 
 and then again run test case :    
 
-> yarn run test Lec12_Comp.test.tsx
+> yarn run test Lec12_Comp.test.tsx   
+
+
+It will show that test case is failed as there is snapshot mismatch   
+
+<img width="750" height="572" alt="image" src="https://github.com/user-attachments/assets/633ec65a-f1d8-4c06-90f3-cf46b9bc20d6" />
+
+ Also,it will ask to update the snapshot using   
+> yarn test -u   
+
+If we give this command and run test case again it will pass   
 
 
 </p>
