@@ -313,6 +313,22 @@ test('click event testing', () => {
 <details>
 <summary> <ins> Lec 12: beforeEach | beforeAll | afterAll | afterEach hooks </ins></summary>
 <p> 
+<img width="890" height="438" alt="image" src="https://github.com/user-attachments/assets/5fe13a36-2af2-407e-8b8d-f866f3f2012c" />
+    
+<ins> Note:</ins> Generally used for DB clean, environment setup, variables reset etc   
+
+
+- beforeAll: executed once before execution of all the testcases
+     
+- beforeEach: executed each time before exection of every testcase
+  
+- afterAll: executed once after exection all the testcases
+  
+- afterEach: executed each time after exection of every testcase
+  
+
+
+ 
     
 </p>
 </details>
