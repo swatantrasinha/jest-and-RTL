@@ -293,8 +293,13 @@ test('click event testing', () => {
 })
 ```
 
+</p>
+</details>
 
-
+<details>
+<summary> <ins> Lec 11: File and Folder naming convention </ins></summary>
+<p> 
+<img width="891" height="590" alt="image" src="https://github.com/user-attachments/assets/f3b7374b-66da-4477-9e3b-dac9e75f1c56" />
 </p>
 </details>
 
