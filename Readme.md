@@ -260,9 +260,40 @@ test('onChange event testing', () => {
 <img width="646" height="357" alt="image" src="https://github.com/user-attachments/assets/b9fe95d4-4117-44bc-9d53-47a25e963ca4" />
 
 <ins>Lec10_Comp.tsx</ins>
+```javascript
+import { useState } from 'react'
 
+const Lec10_Comp = () => {
+    const [data, setdata] = useState("")
+  return (
+    <div>
+        <h1>Test click Event with Button</h1>
+        <div>
+            <button onClick={() => setdata('updated data')}>Update Data</button>
+        </div>
+        {data && (<h2>{data}</h2>)}
+    </div>
+  )
+}
+export default Lec10_Comp
+```
 
 <ins>Lec10_Comp.test.tsx</ins>
+```javascript
+import { fireEvent, render, screen } from "@testing-library/react"
+import '@testing-library/jest-dom'
+import Lec10_Comp from "./Lec10_Comp"
+
+
+test('click event testing', () => {
+    render(<Lec10_Comp />)
+    const btn= screen.getByRole('button')
+    fireEvent.click(btn)
+    expect(screen.getByText('updated data')).toBeInTheDocument()
+})
+```
+
+
 
 </p>
 </details>
