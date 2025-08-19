@@ -301,5 +301,12 @@ test('click event testing', () => {
 <p> 
 <img width="891" height="590" alt="image" src="https://github.com/user-attachments/assets/f3b7374b-66da-4477-9e3b-dac9e75f1c56" />
 </p>
+    
+1. Below file name syntax are also considered testcase file:      
+<img width="275" height="131" alt="image" src="https://github.com/user-attachments/assets/2d36f746-5c8a-415c-abb6-1f4fd1dd7658" />
+
+2. if we create a folder with name  "__tests__", then all files within this folder will be considered as testcase file even if its only .js (need not to be .test or .spec )
+  
+
 </details>
 
