@@ -222,12 +222,12 @@ It shows options like
 import { useState } from 'react'
 
 const Lec09_Comp = () => {
-    const [data, setdata] = useState("")
+    const [data, setData] = useState("")
   return (
     <div>
         <h1>Test onChange Event with Input Textbox</h1>
         <div>
-            <input type="text" value={data} onChange={(e) => setdata(e?.target?.value)} />
+            <input type="text" value={data} onChange={(e) => setData(e?.target?.value)} />
         </div>
     </div>
   )
