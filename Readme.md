@@ -412,9 +412,70 @@ If we give this command and run test case again it will pass
 <summary> <ins> Lec 16: Functional Component method testing </ins></summary>
 <p> 
 <img width="826" height="318" alt="image" src="https://github.com/user-attachments/assets/9d4c2f04-545f-404e-a4c4-a84a3b065798" />
-
 <hr />
 
+<ins>Lec16_Comp.tsx</ins>
+
+```javascript
+import { useState } from 'react'
+import handleOtherMethod from './helper_lec16'
+
+const Lec16_Comp = () => {
+    const [data, setData] = useState("")
+
+    const handleTestData = () => {
+        setData('hello')
+    }
+
+  return (
+    <div>
+        <h1> Functional Component Method Testing</h1>
+        <button data-testid="btn1" onClick={handleTestData}>Update</button>
+        <button onClick={handleOtherMethod}>Print</button>
+        <h2>{data}</h2>
+    </div>
+  )
+}
+
+export default Lec16_Comp
+```
+<ins>helper_lec16.ts</ins>
+
+```javascript
+const handleOtherMethod = () => {
+    return "hi"
+}
+export default handleOtherMethod;
+```
+
+<hr/>
+
+<ins>Lec16_Comp.test.tsx</ins>
+
+```javascript
+import {fireEvent, render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec16_Comp from './Lec16_Comp'
+import handleOtherMethod from './helper_lec16'
+
+test('method testing case 1', () => {
+    render(<Lec16_Comp />)
+    const btn = screen.getByTestId('btn1')
+    fireEvent.click(btn)
+    expect(screen.getByText('hello')).toBeInTheDocument()
+})
+
+test('method testing case 2', () => {
+    expect(handleOtherMethod()).toMatch("hi")
+})
+```
+
+<hr/>
+
+Note:   
+1. Here, method handleTestData is making changes in UI/DOM so method with "testing case 1" we checked its functionality.
+2. However, method handleOtherMethod is not causing any change in UI/DOM. So we have put it outside the React component becuase if its inside the React component we cant test it indedpendently
+   (We coudl have done it by putting in component if it was React class-based component. Because for class based component we can call the method using instance).
 </p>
 </details>
 
