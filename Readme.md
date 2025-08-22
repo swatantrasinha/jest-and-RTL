@@ -482,9 +482,27 @@ Note:
 <details>
 <summary> <ins> Lec 17: RTL Query </ins></summary>
 <p> 
+<img width="822" height="357" alt="image" src="https://github.com/user-attachments/assets/afb03d5e-8439-40c6-af53-81df7f4fd334" />
+<hr/>
+<img width="822" height="278" alt="image" src="https://github.com/user-attachments/assets/3c0b1094-7b37-411d-9bf8-70696b315c96" />
+<hr/>
+<img width="822" height="287" alt="image" src="https://github.com/user-attachments/assets/87468576-af16-404d-8687-89d88924f9ed" />
+<hr />
+<img width="822" height="391" alt="image" src="https://github.com/user-attachments/assets/ccd9f1a6-8996-47ae-8fe9-f1db32d0b856" />
+<hr/>
+</p>
+</details>
+
+<details>
+<summary> <ins> Lec 17: getByRole Query </ins></summary>
+<p> 
+<img width="824" height="471" alt="image" src="https://github.com/user-attachments/assets/ebd9ffbf-2281-4bc8-840f-dbffd90d02a3" />
+<hr />
+
     
 </p>
 </details>
+
 
 
 
