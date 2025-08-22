@@ -479,5 +479,13 @@ Note:
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 17: RTL Query </ins></summary>
+<p> 
+    
+</p>
+</details>
+
+
 
 
