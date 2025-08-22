@@ -375,8 +375,23 @@ It will show that test case is failed as there is snapshot mismatch
 
 If we give this command and run test case again it will pass   
 
-
 </p>
 </details>
+
+<details>
+<summary> <ins> Lec 14: Important points | What we should test </ins></summary>
+<p> 
+<img width="774" height="471" alt="image" src="https://github.com/user-attachments/assets/a8347168-f4a8-4a1e-8b13-bc07ed308c20" />
+</p>
+</details>
+
+
+<details>
+<summary> <ins> Lec 15: Class Component Method Testing </ins></summary>
+<p> 
+    
+</p>
+</details>
+
 
 
