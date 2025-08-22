@@ -380,8 +380,21 @@ If we give this command and run test case again it will pass
 
 <details>
 <summary> <ins> Lec 14: Important points | What we should test </ins></summary>
-<p> 
-<img width="774" height="471" alt="image" src="https://github.com/user-attachments/assets/a8347168-f4a8-4a1e-8b13-bc07ed308c20" />
+<p>
+   
+   <img width="764" height="336" alt="image" src="https://github.com/user-attachments/assets/8ae1b971-586f-4ef7-87f8-4cdcaeb3e590" />      
+   <hr />
+
+   <img width="774" height="471" alt="image" src="https://github.com/user-attachments/assets/a8347168-f4a8-4a1e-8b13-bc07ed308c20" />   
+   <hr />
+
+  <img width="841" height="319" alt="image" src="https://github.com/user-attachments/assets/fa5d0167-75d5-45d5-954f-0faf7e18bcfc" />
+   <hr />
+
+   <img width="770" height="281" alt="image" src="https://github.com/user-attachments/assets/0d853c3b-9cff-4ca8-b8ca-dab9ae4755ee" />
+   <hr />
+    
+
 </p>
 </details>
 
@@ -389,7 +402,19 @@ If we give this command and run test case again it will pass
 <details>
 <summary> <ins> Lec 15: Class Component Method Testing </ins></summary>
 <p> 
-    
+<img width="826" height="318" alt="image" src="https://github.com/user-attachments/assets/1a4a99f8-d4b3-4c3e-8fed-9609d836f0bd" />
+<hr />
+</p>
+</details>
+
+
+<details>
+<summary> <ins> Lec 16: Functional Component method testing </ins></summary>
+<p> 
+<img width="826" height="318" alt="image" src="https://github.com/user-attachments/assets/9d4c2f04-545f-404e-a4c4-a84a3b065798" />
+
+<hr />
+
 </p>
 </details>
 
