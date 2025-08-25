@@ -494,11 +494,14 @@ Note:
 </details>
 
 <details>
-<summary> <ins> Lec 17: getByRole Query </ins></summary>
+<summary> <ins> Lec 18: getByRole Query </ins></summary>
 <p> 
 <img width="824" height="471" alt="image" src="https://github.com/user-attachments/assets/ebd9ffbf-2281-4bc8-840f-dbffd90d02a3" />
 <hr />
-- semantic tags have defined roles   
+<ins>Note:</ins> semantic tags have defined roles   
+
+e.g For textbox --> screen.getByRole('textbox')
+
 
 
     
