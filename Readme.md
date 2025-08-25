@@ -502,11 +502,18 @@ Note:
 
 e.g For textbox --> screen.getByRole('textbox')
 
-
-
-    
 </p>
 </details>
+
+<details>
+<summary> <ins> Lec 19: Multiple elements and Custom Role </ins></summary>
+<p>
+<img width="873" height="393" alt="image" src="https://github.com/user-attachments/assets/813a01f0-ac69-418e-a24c-379c517a0543" />
+<hr />
+
+</p>
+</details>
+
 
 
 
