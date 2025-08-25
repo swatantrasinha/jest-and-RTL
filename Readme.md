@@ -511,6 +511,71 @@ e.g For textbox --> screen.getByRole('textbox')
 <img width="873" height="393" alt="image" src="https://github.com/user-attachments/assets/813a01f0-ac69-418e-a24c-379c517a0543" />
 <hr />
 
+<ins> Lec19_Comp.tsx </ins>
+```javascript
+
+const Lec19_Comp = () => {
+  return (
+    <div>
+      <h1>Multiple Item with Role</h1>
+      <h2>Custom Role</h2>
+      <button>Click 1</button>
+      <button>Click 2</button>
+      
+      <label htmlFor='input1'>User Name</label>
+      <input type='text' id='input1' />
+
+       <label htmlFor='input2'>User Age</label>
+      <input type='text' id='input2' />
+      
+    </div>
+  )
+}
+
+export default Lec19_Comp
+```
+
+<ins> Lec19_Comp.test.tsx </ins>
+```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec19_Comp from './Lec19_Comp'
+
+
+ test('getByRole testing  ', () => {
+    render(<Lec19_Comp />)
+    const btn1= screen.getByRole("button", {name: "Click 1"})
+    const btn2= screen.getByRole("button", {name: "Click 2"})
+
+    const input1= screen.getByRole("textbox", {name: "User Name"})
+    const input2= screen.getByRole("textbox", {name: "User Age"})
+
+    expect(btn1).toBeInTheDocument()
+    expect(btn2).toBeInTheDocument()
+    expect(input1).toBeInTheDocument()
+    expect(input2).toBeInTheDocument()
+ })
+```
+In the above code, there are multiple buttons and textboxes so we did .getByRole and then filtered by name attribute
+This is working as button and textbox are semantic elements.   
+
+However if we try for non-semantic like div       
+
+```javascript
+ <div>dummy text</div>
+```
+and in testcase file    
+```javascript
+ const dv1= screen.getByRole("div")
+ expect(dv1).toBeInTheDocument()
+
+```
+
+This will throw error like below:     
+
+❌ **Error:** TestingLibraryElementError: Unable to find an accessible element with the role "div"   
+
+
 </p>
 </details>
 
