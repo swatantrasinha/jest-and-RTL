@@ -498,6 +498,8 @@ Note:
 <p> 
 <img width="824" height="471" alt="image" src="https://github.com/user-attachments/assets/ebd9ffbf-2281-4bc8-840f-dbffd90d02a3" />
 <hr />
+- semantic tags have defined roles   
+
 
     
 </p>
