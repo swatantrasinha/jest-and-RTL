@@ -594,6 +594,71 @@ expect(dv1).toBeInTheDocument()
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 20: getAllByRole </ins></summary>
+<p>
+<img width="873" height="347" alt="image" src="https://github.com/user-attachments/assets/c3f029b3-2acf-40cd-bccb-f42cbad26bb9" />
+<hr />
+For multiple elements --> we saw in Lec19 how we can use attributes like name to filter element with same role.    
+    
+But how to handle when the attribute(say name) attribute is also same ?   
+
+Here, we can use **getAllByRole**   
+
+<ins>Lec20_Comp.tsx</ins>
+```javascript
+const Lec20_Comp = () => {
+  return (
+    <div>
+        <h1>RTL QueryL getAllByRole</h1>
+        <div className="btns-conatiner">
+            <button>Click Me</button>
+            <button>Click Me</button>
+            <button>Click Me</button>
+        </div>
+
+        <div className="dropdown-container">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </div>
+ 
+    </div>
+  )
+}
+
+export default Lec20_Comp
+```
+
+<ins>Lec20_Comp.test.tsx</ins>
+```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec20_Comp from './Lec20_Comp'
+
+
+ test('getByRole testing  ', () => {
+    render(<Lec20_Comp />)
+    const btns = screen.getAllByRole('button')
+
+    for(let i=0; i<btns.length; i++){
+        expect(btns[i]).toBeInTheDocument()
+    }
+
+    const options= screen.getAllByRole('option')
+    for(let i=0; i<options.length; i++){
+        expect(options[i]).toBeInTheDocument()
+    }
+ })
+```
+
+
+</p>
+</details>
+
+
 
 
 
