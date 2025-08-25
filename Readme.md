@@ -575,6 +575,21 @@ This will throw error like below:
 
 ❌ **Error:** TestingLibraryElementError: Unable to find an accessible element with the role "div"   
 
+We can correct this by using **custom role**   
+
+
+```javascript
+// <div>dummy text</div>
+<div role='dummy'>dummy text</div>
+```
+
+And in the test-case file   
+
+```javascript
+ // const dv1= screen.getByRole("div")
+const dv1= screen.getByRole("dummy")
+expect(dv1).toBeInTheDocument()
+```
 
 </p>
 </details>
