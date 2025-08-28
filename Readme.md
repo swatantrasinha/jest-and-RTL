@@ -654,6 +654,71 @@ import Lec20_Comp from './Lec20_Comp'
  })
 ```
 
+</p>
+</details>
+
+<details>
+<summary> <ins> Lec 21: getByLabelText | checkbox testing with get by label text </ins></summary>
+<p>
+<img width="827" height="337" alt="image" src="https://github.com/user-attachments/assets/359ea71e-0ab4-4fa6-8922-1e76e8f38e64" />   
+
+<ins>Lec21_Comp.tsx</ins>
+
+```javascript
+const Lec21_Comp = () => {
+  return (
+    <div>
+         <h1>getByLabelText - checkbox testing with get by label text</h1>
+
+         <div className='textbox-container'>
+            <label htmlFor='user-name'>Username</label>
+            <input type='text' id='user-name' defaultValue={`abc`} />
+         </div>
+
+          <div className='checkbox-container'>
+            <label htmlFor='skills'>Skills</label>
+            <input type='checkbox' id='skills' defaultChecked={true} />
+         </div>
+      
+    </div>
+  )
+}
+
+export default Lec21_Comp
+```
+
+<ins>Lec21_Comp.test.tsx</ins>
+
+```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec21_Comp from './Lec21_Comp'
+
+
+ test('textbox getByLabelText', () => {
+    render(<Lec21_Comp />)
+    const input = screen.getByLabelText('Username')
+    expect(input).toBeInTheDocument()    
+    expect(input).toHaveValue('abc')    
+ })
+
+
+  test('checkbox getByLabelText', () => {
+    render(<Lec21_Comp />)
+    const checkbox = screen.getByLabelText('Skills')
+    expect(checkbox).toBeInTheDocument()    
+    expect(checkbox).toBeChecked()   
+ })
+```
+
+</p>
+</details>
+
+<details>
+<summary> <ins> Lec 22: getAllByLabelText with multiple elements </ins></summary>
+<p>
+<img width="827" height="337" alt="image" src="https://github.com/user-attachments/assets/05d313ff-d474-464c-bd9a-20f1dd2d14d5" />   
+
 
 </p>
 </details>
