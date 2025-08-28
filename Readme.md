@@ -517,7 +517,7 @@ e.g For textbox --> screen.getByRole('textbox')
 const Lec19_Comp = () => {
   return (
     <div>
-      <h1>Multiple Item with Role</h1>
+       <h1>RTL Query: getByRole - Multiple Item with Role</h1>
       <h2>Custom Role</h2>
       <button>Click 1</button>
       <button>Click 2</button>
@@ -610,7 +610,7 @@ Here, we can use **getAllByRole**
 const Lec20_Comp = () => {
   return (
     <div>
-        <h1>RTL QueryL getAllByRole</h1>
+        <h1>RTL Query:  getAllByRole</h1>
         <div className="btns-conatiner">
             <button>Click Me</button>
             <button>Click Me</button>
@@ -658,7 +658,7 @@ import Lec20_Comp from './Lec20_Comp'
 </details>
 
 <details>
-<summary> <ins> Lec 21: getByLabelText | checkbox testing with get by label text </ins></summary>
+<summary> <ins> Lec 21: getByLabelText - textbox and checkbox testing with get by label text </ins></summary>
 <p>
 <img width="827" height="337" alt="image" src="https://github.com/user-attachments/assets/359ea71e-0ab4-4fa6-8922-1e76e8f38e64" />   
 
@@ -668,7 +668,7 @@ import Lec20_Comp from './Lec20_Comp'
 const Lec21_Comp = () => {
   return (
     <div>
-         <h1>getByLabelText - checkbox testing with get by label text</h1>
+         <h1>RTL Query : getByLabelText - textbox and checkbox testing </h1>
 
          <div className='textbox-container'>
             <label htmlFor='user-name'>Username</label>
@@ -719,11 +719,94 @@ import Lec21_Comp from './Lec21_Comp'
 <p>
 <img width="827" height="337" alt="image" src="https://github.com/user-attachments/assets/05d313ff-d474-464c-bd9a-20f1dd2d14d5" />   
 
+<ins>Lec22_Comp.tsx</ins>
+
+```javascript
+const Lec22_Comp = () => {
+  return (
+    <div>
+          <h1>RTL Query : getAllByLabelText</h1>
+         <div className="textboxes-container">
+             <div className='textbox-container1'>
+                <label htmlFor='user-name1'>Username</label>
+                <input type='text' id='user-name1' defaultValue={`aaa`} />
+            </div>
+
+            <div className='textbox-container2'>
+                <label htmlFor='user-name2'>Username</label>
+                <input type='text' id='user-name2' defaultValue={`bbb`} />
+            </div>
+
+            <div className='textbox-container3'>
+                <label htmlFor='user-name3'>Username</label>
+                <input type='text' id='user-name3' defaultValue={`ccc`} />
+            </div>
+         </div>
+
+            <div className="checkboxes-container">
+             <div className='checkbox-container1'>
+                <label htmlFor='skill1'>Skills</label>
+                <input type='checkbox' id='skill1' defaultChecked={true} />
+            </div>
+
+            <div className='checkbox-container2'>
+                <label htmlFor='skill2'>Skills</label>
+                <input type='checkbox' id='skill2' defaultChecked={true} />
+            </div>
+
+            <div className='checkbox-container3'>
+                <label htmlFor='skill3'>Skills</label>
+                <input type='checkbox' id='skill3' defaultChecked={true} />
+            </div>
+         </div>
+
+
+        
+
+    </div>
+  )
+}
+
+export default Lec22_Comp
+```
+
+<ins>Lec22_Comp.test.tsx</ins>
+```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec22_Comp from './Lec22_Comp'
+
+
+ test('textbox getByLabelText', () => {
+    render(<Lec22_Comp />)
+    const inputs = screen.getAllByLabelText('Username')
+    for (let i = 0; i < inputs.length; i++) {
+        expect(inputs[i]).toBeInTheDocument()
+    }
+ })
+
+
+  test('checkbox getByLabelText', () => {
+    render(<Lec22_Comp />)
+     const checkboxes = screen.getAllByLabelText('Skills')
+    for (let i = 0; i < checkboxes.length; i++) {
+        expect(checkboxes[i]).toBeInTheDocument()    
+        expect(checkboxes[i]).toBeChecked() 
+    }
+ })
+```
 
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 23: getByPlaceholderText and getAllByPlaceholderText </ins></summary>
+<p>
+<img width="825" height="392" alt="image" src="https://github.com/user-attachments/assets/75a4422f-7402-4224-b5b0-0416d807ff3e" />   
 
+
+</p>
+</details>
 
 
 
