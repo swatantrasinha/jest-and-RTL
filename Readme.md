@@ -804,6 +804,53 @@ import Lec22_Comp from './Lec22_Comp'
 <p>
 <img width="825" height="392" alt="image" src="https://github.com/user-attachments/assets/75a4422f-7402-4224-b5b0-0416d807ff3e" />   
 
+<ins>Lec23_Comp.tsx</ins>
+```javascript
+const Lec22_Comp = () => {
+  return (
+    <div>
+         <h1>RTL Query : getByPlaceholderText and getAllByPlaceholderText </h1>
+         <div>
+            <input type='text' placeholder='enter username' defaultValue={'abc'} />
+         </div>
+
+         <div className="input-container">
+            <input type='text' placeholder='enter name' defaultValue={'xyz'} />
+            <input type='text' placeholder='enter name' defaultValue={'xyz'} />
+            <input type='text' placeholder='enter name' defaultValue={'xyz'} />
+         </div>
+        
+    </div>
+  )
+}
+
+export default Lec22_Comp
+```
+
+<ins>Lec23_Comp.test.tsx</ins>
+```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec23_Comp from './Lec23_Comp'
+
+
+ test('textbox getByPlaceholderText', () => {
+    render(<Lec23_Comp />)
+    const input = screen.getByPlaceholderText('enter username')
+    expect(input).toBeInTheDocument() 
+    expect(input).toHaveValue('abc') 
+ })
+
+
+  test('textbox getAllByPlaceholderText', () => {
+    render(<Lec23_Comp />)
+    const inputs = screen.getAllByPlaceholderText('enter name')
+    for (let i = 0; i < inputs.length; i++) {
+        expect(inputs[i]).toBeInTheDocument() 
+        expect(inputs[i]).toHaveValue('xyz') 
+    }
+ })
+```
 
 </p>
 </details>
