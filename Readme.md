@@ -921,7 +921,7 @@ import Lec24_Comp from './Lec24_Comp'
 </details>
 
 <details>
-<summary> <ins> Lec 24: getByText and getAllByText </ins></summary>
+<summary> <ins> Lec 25: getByTestId and getAllByTestId </ins></summary>
 <p>
 <img width="830" height="407" alt="image" src="https://github.com/user-attachments/assets/ebbc7b42-f1ed-4a05-9fcc-62a8ba88bdab" />   
     
