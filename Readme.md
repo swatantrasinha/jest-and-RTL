@@ -855,6 +855,89 @@ import Lec23_Comp from './Lec23_Comp'
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 24: getByText and getAllByText </ins></summary>
+<p>
+<img width="830" height="407" alt="image" src="https://github.com/user-attachments/assets/ebbc7b42-f1ed-4a05-9fcc-62a8ba88bdab" />   
+    
+<ins>Lec24_Comp.tsx</ins>
+    
+```javascript
+const Lec24_Comp = () => {
+  return (
+    <div>
+       <h1>RTL Query : getByText and getAllByText</h1>
+       <button>Login</button>
+       <p className="para-cls" id='p1'>para tag testing</p>
+       <h2>Heading Level 2</h2>
+       <h2>Heading Level 2</h2>
+    </div>
+  )
+}
+export default Lec24_Comp
+
+```
+
+
+<ins>Lec24_Comp.test.tsx</ins>
+    
+```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec24_Comp from './Lec24_Comp'
+
+
+ test('getByText - single button testing', () => {
+    render(<Lec24_Comp />)
+    const btn = screen.getByText('Login')
+    expect(btn).toBeInTheDocument()
+ })
+
+  test('getByText - single p tag testing', () => {
+    render(<Lec24_Comp />)
+    const paraTag = screen.getByText('para tag testing')
+    expect(paraTag).toBeInTheDocument() 
+    expect(paraTag).toHaveClass('para-cls') 
+    expect(paraTag).toHaveAttribute('id') // check if attribute exists
+    expect(paraTag).toHaveAttribute('id','p1') // // check if attribute exists with specific value
+ })
+
+  test('getByText - h1Tag testing', () => {
+    render(<Lec24_Comp />)
+    const h1Tag = screen.getByText('RTL Query : getByText and getAllByText')
+    expect(h1Tag).toBeInTheDocument() 
+ })
+
+   test('getAllByText - h2Tags testing', () => {
+    render(<Lec24_Comp />)
+    const h2Tags = screen.getAllByText('Heading Level 2')
+    for (let i = 0; i < h2Tags.length; i++) {
+      expect(h2Tags[i]).toBeInTheDocument() 
+    }
+ })
+
+```
+</p>
+</details>
+
+<details>
+<summary> <ins> Lec 24: getByText and getAllByText </ins></summary>
+<p>
+<img width="830" height="407" alt="image" src="https://github.com/user-attachments/assets/ebbc7b42-f1ed-4a05-9fcc-62a8ba88bdab" />   
+    
+<ins>Lec25_Comp.tsx</ins>
+    
+```javascript
+```
+
+<ins>Lec25_Comp.test.tsx</ins>
+
+```javascript
+```
+</p>
+</details>
+
+
 
 
 
