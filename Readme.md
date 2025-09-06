@@ -928,12 +928,56 @@ import Lec24_Comp from './Lec24_Comp'
 <ins>Lec25_Comp.tsx</ins>
     
 ```javascript
+
+const Lec25_Comp = () => {
+  return (
+    <div>
+       <h1>RTL Query : getByTestId and getAllByTestId</h1>
+       <div data-testid='div-test-id'>This is div element</div>
+       <h2 data-testid='h2-test-id'>Heading Level 2</h2>
+       <p data-testid='para-test-id'>This is para1 element</p>
+       <p data-testid='para-test-id'>This is para2 element</p>
+    </div>
+  )
+}
+export default Lec25_Comp
+
 ```
 
 <ins>Lec25_Comp.test.tsx</ins>
 
 ```javascript
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec25_Comp from './Lec25_Comp'
+
+
+ test('getByTestId - div ele testing', () => {
+    render(<Lec25_Comp />)
+    const divEle = screen.getByTestId('div-test-id')
+    expect(divEle).toBeInTheDocument()
+ })
+
+  test('getByTestId - h2 ele testing', () => {
+    render(<Lec25_Comp />)
+    const h2Ele = screen.getByTestId('h2-test-id')
+    expect(h2Ele).toBeInTheDocument()
+ })
+
+   test('getAllByTestId - multiple para ele testing', () => {
+    render(<Lec25_Comp />)
+    const paraElements = screen.getAllByTestId('para-test-id')
+    for (let i = 0; i < paraElements.length; i++) {
+       expect(paraElements[i]).toBeInTheDocument()
+    }
+ })
 ```
+
+<ins>Note:</ins>   
+1. Here in the third testcase we are using getAllByTestId means assuming that multiple elements will have same test-id.   
+
+2. data-testid is just a custom attribute name.
+It can be element-testid, component-testid etc. We will see how to use it in next lecture   
 </p>
 </details>
 
