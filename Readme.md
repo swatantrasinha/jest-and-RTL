@@ -1361,6 +1361,7 @@ configure({testIdAttribute: 'element-id'})
  <details>
 <summary> <ins> Lec 33:  TextMatch with Function </ins> </summary>
 <p> 
+<img width="829" height="271" alt="image" src="https://github.com/user-attachments/assets/d73083c1-dcd2-4d87-a973-99db59e35eb7" />
 
 <ins>Lec33_Comp.tsx</ins>
 ```javascript
@@ -1368,6 +1369,7 @@ configure({testIdAttribute: 'element-id'})
 ```
 
 <ins>Lec33_Comp.test.tsx</ins>
+
 ```javascript
 
 ```
