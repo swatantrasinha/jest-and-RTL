@@ -1159,6 +1159,67 @@ configure({testIdAttribute: 'element-id'})
 </details>
 
 
+<details>
+<summary> <ins> Lec 29: getByAltText and getAllByAltText </ins></summary>
+<p>   
+<img width="1141" height="571" alt="image" src="https://github.com/user-attachments/assets/c2ac8a47-feb9-45a9-b436-f18583ec8ede" />
+
+<ins>Lec29_Comp.tsx</ins>
+
+```javascript
+const Lec29_Comp = () => {
+  return (
+    <div>
+       <h1>RTL Query : getByAltText and getAllByAltText </h1>
+       <div>
+          <img alt='dummy image' src='https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?w=900' />
+       </div>
+
+        <div>
+          <img alt='lemon and knife' src='https://images.unsplash.com/photo-1600716051809-e997e11a5d52?q=80&w=2650' />
+          <img alt='lemon and knife' src='https://images.unsplash.com/photo-1600716051809-e997e11a5d52?q=80&w=2650' />
+       </div>
+    </div>
+  )
+}
+export default Lec29_Comp
+
+```
+
+<ins>Lec29_Comp.test.tsx</ins>
+```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec29_Comp from './Lec29_Comp'
+
+configure({testIdAttribute: 'element-id'})
+
+ test('image - testing with getByAltText', () => {
+    render(<Lec29_Comp />)
+    const imgEle = screen.getByAltText('dummy image')
+    expect(imgEle).toBeInTheDocument()
+ })
+
+
+  test('images - testing with getAllByAltText', () => {
+    render(<Lec29_Comp />)
+    const imagesList = screen.getAllByAltText('dummy image')
+    for (let i = 0; i < imagesList.length; i++) {
+      expect(imagesList[i]).toBeInTheDocument()
+    }
+    
+ })
+```
+</p>
+</details>
+
+<details>
+<summary> <ins> Lec 30: Priority Order for RTL Queries </ins></summary>
+<p>
+
+</p>
+</details>
+
 
 
 
