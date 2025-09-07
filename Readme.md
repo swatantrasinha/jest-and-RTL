@@ -976,10 +976,30 @@ import Lec25_Comp from './Lec25_Comp'
 <ins>Note:</ins>   
 1. Here in the third testcase we are using getAllByTestId means assuming that multiple elements will have same test-id.   
 
-2. data-testid is just a custom attribute name.
-It can be element-testid, component-testid etc. We will see how to use it in next lecture   
+2. data-testid is just a custom attribute name.   
+It can be element-testid, component-testid etc. We will see how to use it in next lecture(Overriding data-testid)      
 </p>
 </details>
+
+
+<details>
+<summary> <ins> Lec 26: Overriding data-testid </ins></summary>
+<p>
+   
+<ins>Lec26_Comp.tsx</ins>
+    
+```javascript
+```
+
+<ins>Lec26_Comp.test.tsx</ins>
+    
+```javascript
+```
+</p>
+</details>
+
+
+
 
 
 
