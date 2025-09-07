@@ -990,8 +990,7 @@ It can be element-testid, component-testid etc. We will see how to use it in nex
 <ins>Lec26_Comp.tsx</ins>
 
 ```javascript
-
-const Lec25_Comp = () => {
+const Lec26_Comp = () => {
   return (
     <div>
        <h1>RTL Query : Overriding data-testid</h1>
@@ -1000,7 +999,8 @@ const Lec25_Comp = () => {
     </div>
   )
 }
-export default Lec25_Comp
+export default Lec26_Comp
+
 ```
 
 <ins>Lec26_Comp.test.tsx</ins>
@@ -1017,6 +1017,7 @@ configure({testIdAttribute: 'element-id'})
     const divEle = screen.getByTestId('test-div')
     expect(divEle).toBeInTheDocument()
  })
+
 ```
 </p>
 </details>
@@ -1030,13 +1031,133 @@ configure({testIdAttribute: 'element-id'})
 <ins>Lec27_Comp.tsx</ins>
 ```javascript
 
+const Lec27_Comp = () => {
+  return (
+    <div>
+       <h1>RTL Query : getByDisplayValue and getAllByDisplayValue </h1>
+       <div>
+          <input type="text" defaultValue='abc' />
+       </div>
+
+       <div>
+        <textarea defaultValue='hello world' />
+       </div>
+
+       <div>
+        <input type="radio" defaultValue='male' />
+       </div>
+
+        <div>
+        <input type="text" defaultValue='enter query' />
+        <input type="text" defaultValue='enter query' />
+       </div>
+    </div>
+  )
+}
+export default Lec27_Comp
+
 ```
 
 <ins>Lec27_Comp.test.tsx</ins>
 ```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec27_Comp from './Lec27_Comp'
 
+configure({testIdAttribute: 'element-id'})
+
+ test('textbox- testing using getByDisplayValue', () => {
+    render(<Lec27_Comp />)
+    const inputEle = screen.getByDisplayValue('abc')
+    expect(inputEle).toBeInTheDocument()
+ })
+
+test('textArea - testing using getByDisplayValue', () => {
+    render(<Lec27_Comp />)
+     const textAreaEle = screen.getByDisplayValue('hello world')
+    expect(textAreaEle).toBeInTheDocument()
+ })
+
+ test('radioButton - testing using getByDisplayValue', () => {
+    render(<Lec27_Comp />)
+     const radioBtnEle = screen.getByDisplayValue('male')
+    expect(radioBtnEle).toBeInTheDocument()
+ })
+
+  test('textbox- testing using getAllByDisplayValue', () => {
+    render(<Lec27_Comp />)
+    const inputList = screen.getAllByDisplayValue('enter query')
+    for (let i = 0; i < inputList.length; i++) {
+        expect(inputList[i]).toBeInTheDocument()
+    }
+ })
 ```
 </details>
+
+
+<details>
+<summary> <ins> Lec 28: getByTitle and getAllByTitle </ins></summary>
+<p>   
+<img width="829" height="417" alt="image" src="https://github.com/user-attachments/assets/3a27d207-8eb3-4e81-911b-f9d08a7d6f5f" />   
+
+<ins>Lec28_Comp.tsx</ins>
+
+```javascript
+const Lec28_Comp = () => {
+  return (
+    <div>
+       <h1>RTL Query : getByTitle and getAllByTitle </h1>
+       <div>
+          <button title="click to open">Click Me</button>
+       </div>
+       <div>
+        <span title='black spade suit'>&#x2660;</span>
+       </div>
+
+       <div>
+        <span title='black star'>&#x2605;</span>
+        <span title='black star'>&#x2605;</span>
+       </div>
+    </div>
+  )
+}
+export default Lec28_Comp
+
+```
+
+<ins>Lec28_Comp.test.tsx</ins>
+
+```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec28_Comp from './Lec28_Comp'
+
+configure({testIdAttribute: 'element-id'})
+
+ test('button- testing with getByTitle', () => {
+    render(<Lec28_Comp />)
+    const btnEle = screen.getByTitle('click to open')
+    expect(btnEle).toBeInTheDocument()
+ })
+
+  test('span- testing with getByTitle', () => {
+    render(<Lec28_Comp />)
+    const spanEle = screen.getByTitle('black spade suit')
+    expect(spanEle).toBeInTheDocument()
+ })
+
+   test('span elements - testing with getAllByTitle', () => {
+    render(<Lec28_Comp />)
+    const spanList = screen.getAllByTitle('black star')
+    for (let i = 0; i < spanList.length; i++) {
+      expect(spanList[i]).toBeInTheDocument()
+    }
+   })
+
+```
+</p>
+</details>
+
 
 
 
