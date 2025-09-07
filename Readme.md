@@ -1227,6 +1227,93 @@ The priority order is same as mentioned in the offocial docs of RTL. See below :
 
 
 
+ <details>
+<summary> <ins> Lec 31:  Assertion Methods </ins></summary>
+     
+<p>   
+<img width="1111" height="435" alt="image" src="https://github.com/user-attachments/assets/5ccc1bea-9bc9-4f7f-aad5-7ada570aa90e" />   
+
+<ins>Lec31_Comp.tsx</ins>
+
+```javascript
+const Lec31_Comp = () => {
+    return (
+        <div>
+            <h1>Lec30:  Assertion Methods</h1>
+            <input 
+                className='test-style my-custom-style' 
+                id='user' type='text' 
+                defaultValue='abc' 
+                name='userName' 
+                data-test='dummy'
+                />
+            
+            <button disabled className="btn1" id='btn-id'>Click Me</button>
+        </div>
+    )
+}
+export default Lec31_Comp
+
+```
+
+<ins>Lec31_Comp.test.tsx</ins>
+
+```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec31_Comp from './Lec31_Comp'
+
+configure({testIdAttribute: 'element-id'})
+
+ test('test - input textbox', () => {
+    render(<Lec31_Comp />)
+    const input = screen.getByRole('textbox')
+    expect(input).toBeInTheDocument()
+    expect(input).toHaveValue()
+    expect(input).toHaveValue('abc')
+    expect(input).toBeEnabled()
+    expect(input).toHaveAttribute('id')
+    expect(input).toHaveAttribute('data-test')
+    expect(input).toHaveClass('test-style')
+    expect(input).toHaveClass('my-custom-style')
+ })
+
+  test('test - negavtive cases', () => {
+    render(<Lec31_Comp />)
+    const btn = screen.getByRole('button')
+    expect(btn).toBeInTheDocument()
+    expect(btn).not.toHaveClass('btn')
+    expect(btn).not.toHaveAttribute('id','abc')
+    expect(btn).not.toBeEnabled()
+  })
+```
+</p>
+
+</details>
+
+
+ <details>
+<summary> <ins> Lec 32:  TextMatch with String and Regex </ins> </summary>
+<p> 
+<img width="829" height="332" alt="image" src="https://github.com/user-attachments/assets/0f55dce2-4fbe-4f1c-b117-260980a5648b" />   
+
+<ins>Lec32_Comp.tsx</ins>
+
+```javascript
+
+```
+
+<ins>Lec32_Comp.test.tsx</ins>
+
+```javascript
+
+```
+    
+</p>
+</details>
+
+
+
 
 
 
