@@ -1021,7 +1021,22 @@ configure({testIdAttribute: 'element-id'})
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 27: getByDisplayValue and getAllByDisplayValue </ins></summary>
+<p>
+<img width="829" height="417" alt="image" src="https://github.com/user-attachments/assets/130fab1e-910d-4720-bca0-8cd097f85f11" />
+</p>
 
+<ins>Lec27_Comp.tsx</ins>
+```javascript
+
+```
+
+<ins>Lec27_Comp.test.tsx</ins>
+```javascript
+
+```
+</details>
 
 
 
