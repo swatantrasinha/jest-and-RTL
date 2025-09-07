@@ -985,15 +985,38 @@ It can be element-testid, component-testid etc. We will see how to use it in nex
 <details>
 <summary> <ins> Lec 26: Overriding data-testid </ins></summary>
 <p>
+<img width="1125" height="467" alt="image" src="https://github.com/user-attachments/assets/bcae7dfb-3647-41df-a5a6-0c6f650529d9" />   
    
 <ins>Lec26_Comp.tsx</ins>
-    
+
 ```javascript
+
+const Lec25_Comp = () => {
+  return (
+    <div>
+       <h1>RTL Query : Overriding data-testid</h1>
+       {/* <div data-testid='test-div'>This is div element</div> */}
+       <div element-id='test-div'>This is div element</div>
+    </div>
+  )
+}
+export default Lec25_Comp
 ```
 
 <ins>Lec26_Comp.test.tsx</ins>
-    
+
 ```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec26_Comp from './Lec26_Comp'
+
+configure({testIdAttribute: 'element-id'})
+
+ test('test div with element-id', () => {
+    render(<Lec26_Comp />)
+    const divEle = screen.getByTestId('test-div')
+    expect(divEle).toBeInTheDocument()
+ })
 ```
 </p>
 </details>
