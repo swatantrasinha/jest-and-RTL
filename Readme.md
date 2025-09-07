@@ -1300,17 +1300,80 @@ configure({testIdAttribute: 'element-id'})
 <ins>Lec32_Comp.tsx</ins>
 
 ```javascript
+const Lec32_Comp = () => {
+    return (
+        <div>
+            <h1>Lec32: TextMatch with String and Regex</h1>
+            <div>Hello World</div>
+         </div>
+    )
+}
 
+export default Lec32_Comp
 ```
 
 <ins>Lec32_Comp.test.tsx</ins>
 
 ```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec32_Comp from './Lec32_Comp'
+
+configure({testIdAttribute: 'element-id'})
+
+ test('text match with string', () => {
+    render(<Lec32_Comp />)
+    const divEle1 = screen.getByText('hello world',{exact: false})
+    expect(divEle1).toBeInTheDocument()
+
+    const divEle2 = screen.getByText('hello World',{exact: false})
+    expect(divEle2).toBeInTheDocument()
+
+    const divEle3 = screen.getByText('Hello world',{exact: false})
+    expect(divEle3).toBeInTheDocument()
+    
+    const divEle4 = screen.getByText('hello',{exact: false})
+    expect(divEle4).toBeInTheDocument()
+ })
+
+  test('text match with regex', () => {
+    render(<Lec32_Comp />)
+    const div1 = screen.getByText(/Hello/)
+    expect(div1).toBeInTheDocument()
+
+    const div2 = screen.getByText(/lo Wo/)
+    expect(div2).toBeInTheDocument()
+
+    const div3 = screen.getByText(/hello/i)
+    expect(div3).toBeInTheDocument()
+
+
+    const div4 = screen.getByText(/Hello W?orld/i)
+    expect(div4).toBeInTheDocument()
+  })
 
 ```
     
 </p>
+
 </details>
+
+ <details>
+<summary> <ins> Lec 33:  TextMatch with Function </ins> </summary>
+<p> 
+
+<ins>Lec33_Comp.tsx</ins>
+```javascript
+
+```
+
+<ins>Lec33_Comp.test.tsx</ins>
+```javascript
+
+```
+
+</p>
+ </details>
 
 
 
