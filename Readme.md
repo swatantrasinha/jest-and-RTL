@@ -1216,6 +1216,10 @@ configure({testIdAttribute: 'element-id'})
 <details>
 <summary> <ins> Lec 30: Priority Order for RTL Queries </ins></summary>
 <p>
+    
+The priority order is same as mentioned in the offocial docs of RTL. See below :   /
+    
+<img width="1409" height="727" alt="image" src="https://github.com/user-attachments/assets/f0c035eb-c672-460e-86f5-c563f0770629" />
 
 </p>
 </details>
