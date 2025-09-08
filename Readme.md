@@ -1360,22 +1360,51 @@ configure({testIdAttribute: 'element-id'})
 
  <details>
 <summary> <ins> Lec 33:  TextMatch with Function </ins> </summary>
-<p> 
-<img width="829" height="271" alt="image" src="https://github.com/user-attachments/assets/d73083c1-dcd2-4d87-a973-99db59e35eb7" />
+<p>    
+<img width="829" height="271" alt="image" src="https://github.com/user-attachments/assets/d73083c1-dcd2-4d87-a973-99db59e35eb7" />   
 
 <ins>Lec33_Comp.tsx</ins>
 ```javascript
+const Lec33_Comp = () => {
+    return (
+        <div>
+            <h1>Lec33: TextMatch with Function</h1>
+            <div>Hello World</div>
+         </div>
+    )
+}
+export default Lec33_Comp
 
 ```
 
 <ins>Lec33_Comp.test.tsx</ins>
 
 ```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec33_Comp from './Lec33_Comp'
+
+configure({testIdAttribute: 'element-id'})
+
+ test('text match with string', () => {
+    render(<Lec33_Comp />)
+    const divEle1 = screen.getByText((content,element) => content.startsWith('Hello'))
+    expect(divEle1).toBeInTheDocument()
+
+   const divEle2 = screen.getByText((content, element) => content.endsWith('World'))
+   expect(divEle2).toBeInTheDocument()    
+
+   const divEle3 = screen.getByText((content, element) => {
+      return (content?.length === 11) && content?.includes('lo Wo')
+   })
+   expect(divEle3).toBeInTheDocument()    
+
+ })
 
 ```
 
 </p>
- </details>
+</details>
 
 
 
