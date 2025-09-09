@@ -1463,10 +1463,106 @@ import Lec34_Comp from './Lec34_Comp'
 <p>
 <img width="1114" height="526" alt="image" src="https://github.com/user-attachments/assets/6f1d2b7b-a935-4e59-8e80-34d0cb0293d4" />   
 
+<ins>Lec35_Comp.tsx</ins>  
 
+```javascript
+import { useEffect, useState } from "react"
+
+const Lec35_Comp = () => {
+    const [data, setData]= useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setData(true)
+        }, 3000);
+    }, [])
     
+    return (
+        <div>
+            <h1>Lec35:findBy and findAllBy | test async elements</h1>
+            {data ? (<div>Data Found</div>): (<div>Data Not Found</div>)}
+         </div>
+    )
+}
+
+export default Lec35_Comp
+
+```
+
+<ins>Lec35_Comp.test.tsx</ins>   
+
+```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec35_Comp from './Lec35_Comp'
+
+ test('findBy test case', async() => {
+    render(<Lec35_Comp />)
+    // this will fail
+    /*
+    const dataFoundEle = screen.getByText('Data Found')
+    expect(dataFoundEle).toBeInTheDocument()
+    */
+
+     // this will also fail
+    /*
+    const dataFoundEle = screen.queryByText('Data Found')
+    expect(dataFoundEle).toBeInTheDocument()
+    */
+
+    const dataFoundEle = await screen.findByText('Data Found',{}, {timeout: 3000})
+    expect(dataFoundEle).toBeInTheDocument()
+
+ })
+
+```
+
 </p>
 </details>
+
+
+<details>
+<summary> <ins> Lec 36:  Test Elements with JavaScript Query | Custom Query </ins> </summary>
+<p>
+<ins>Custom query is used in case we are not able to use getBy/queryBy/findBy</ins>   
+
+<ins>Lec36_Comp.tsx</ins> 
+
+```javascript
+
+const Lec36_Comp = () => {
+    
+    return (
+        <div>
+            <h1>Lec36 : Test Elements with JavaScript Query | Custom Query </h1>
+            <div id='test-id'>Hello World</div>
+         </div>
+    )
+}
+
+export default Lec36_Comp
+
+```
+
+
+<ins>Lec36_Comp.test.tsx</ins> 
+
+```javascript
+import {render} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec35_Comp from './Lec36_Comp'
+
+ test('test case with custom query', async() => {
+    render(<Lec35_Comp />)
+    const ele = document.querySelector('#test-id')
+    expect(ele).toBeInTheDocument()
+    expect(ele).toHaveTextContent('Hello World')
+ })
+```
+
+</p>
+</details>
+
 
 
 
