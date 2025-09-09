@@ -1406,6 +1406,70 @@ configure({testIdAttribute: 'element-id'})
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 34:  QueryBy and QueryAllBy | Test hidden elements </ins> </summary>
+<p>   
+<img width="1114" height="526" alt="image" src="https://github.com/user-attachments/assets/f6ef83e5-8580-4357-87a7-ceb16df385ce" />   
+Almost all features of getBy are there in queryBy, The extra feature with queryBy is even if element is hidden in UI, then also we can test it.   
+
+<ins>Lec34_Comp.tsx</ins>   
+```javascript
+const Lec34_Comp = () => {
+    let isLogin= false
+    return (
+        <div>
+            <h1>Lec34: QueryBy and QueryAllBy</h1>
+            {!isLogin ? (<button>Login</button>): (<button>Logout</button>)}
+         </div>
+    )
+}
+export default Lec34_Comp
+```
+
+
+<ins>Lec34_Comp.test.tsx</ins>   
+```javascript
+import {render, screen, configure} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec34_Comp from './Lec34_Comp'
+
+ test('queryBy test case', () => {
+    render(<Lec34_Comp />)
+    const div1 = screen.getByText('Login')
+    expect(div1).toBeInTheDocument()
+
+   
+   //  const div2 = screen.getByText('Logout')
+   //  expect(div2).toBeInTheDocument()
+   /* This will fail because in Lec34_Comp.tsx, isLogin is false
+   so Logout button will not be rendered
+   To solve this we will use "queryBy" approach  */   
+
+   const div2 = screen.queryByText('Logout')
+   expect(div2).not.toBeInTheDocument()
+
+    /* Note: if we try .not.toBeInTheDocument()
+    with getBy, it will not work 
+   // const div3 = screen.getByText('Logout')
+   // expect(div3).not.toBeInTheDocument()
+   */ 
+ })
+```
+</p>
+</details>
+
+<details>
+<summary> <ins> Lec 35:  findBy and findAllBy | test async elements </ins> </summary>
+<p>
+<img width="1114" height="526" alt="image" src="https://github.com/user-attachments/assets/6f1d2b7b-a935-4e59-8e80-34d0cb0293d4" />   
+
+
+    
+</p>
+</details>
+
+
+
 
 
 
