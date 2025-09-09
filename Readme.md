@@ -1524,7 +1524,7 @@ import Lec35_Comp from './Lec35_Comp'
 <details>
 <summary> <ins> Lec 36:  Test Elements with JavaScript Query | Custom Query </ins> </summary>
 <p>
-<ins>Custom query is used in case we are not able to use getBy/queryBy/findBy</ins>   
+Custom query is used in case we are not able to use getBy/queryBy/findBy   
 
 <ins>Lec36_Comp.tsx</ins> 
 
