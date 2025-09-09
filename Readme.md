@@ -1550,10 +1550,10 @@ export default Lec36_Comp
 ```javascript
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Lec35_Comp from './Lec36_Comp'
+import Lec36_Comp from './Lec36_Comp'
 
  test('test case with custom query', async() => {
-    render(<Lec35_Comp />)
+    render(<Lec36_Comp />)
     const ele = document.querySelector('#test-id')
     expect(ele).toBeInTheDocument()
     expect(ele).toHaveTextContent('Hello World')
@@ -1562,6 +1562,53 @@ import Lec35_Comp from './Lec36_Comp'
 
 </p>
 </details>
+
+<details>
+<summary> <ins> Lec 37: Querying Within Elements </ins> </summary>
+<p>
+This is used when with the parent we need to test for the child as well.   
+
+<ins>Lec37_Comp.tsx</ins> 
+
+```javascript
+const Lec37_Comp = () => {
+    
+    return (
+        <div>
+            <h1>Lec37 : Querying Within Elements </h1>
+            <div >
+                Hello World
+                <p>Hi</p>
+                <p>bye</p>
+            </div>
+         </div>
+    )
+}
+
+export default Lec37_Comp
+```
+
+<ins>Lec37_Comp.test.tsx</ins> 
+
+```javascript
+import {render, screen, within} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec37_Comp from './Lec37_Comp'
+
+ test('test case with custom query', async() => {
+    render(<Lec37_Comp />)
+    const el = screen.getByText('Hello World')
+    expect(el).toBeInTheDocument()
+    const subEl = within(el).getByText('Hi')
+    expect(subEl).toBeInTheDocument()
+ })
+```
+
+    
+</p>
+</details>
+
+
 
 
 
