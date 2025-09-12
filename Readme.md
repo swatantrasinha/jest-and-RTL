@@ -1603,13 +1603,17 @@ import Lec37_Comp from './Lec37_Comp'
     expect(subEl).toBeInTheDocument()
  })
 ```
-
     
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 38: Click Event with User Event Library </ins> </summary>
+<p>
+<img width="818" height="381" alt="image" src="https://github.com/user-attachments/assets/84418738-9007-4ce0-8128-f706b8e33c12" />
 
-
+</p>
+</details>
 
 
 
