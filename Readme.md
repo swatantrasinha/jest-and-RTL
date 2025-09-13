@@ -1612,7 +1612,7 @@ import Lec37_Comp from './Lec37_Comp'
 <p>
 <img width="818" height="381" alt="image" src="https://github.com/user-attachments/assets/84418738-9007-4ce0-8128-f706b8e33c12" />   
 
-We have earlier seen the testing of Click event. Refer: Lec 10: Click event test case with button | event fire    
+We have earlier seen the testing of Click event. Refer: **Lec 10: Click event test case with button | event fire**       
    
 - RTL is used not only with react but also with vanilla js/vue js/angular js etc.
   When we install react in our project,so generally we get this by default. But in other framework like vue/angular when we install RTL we get this user-event library. There are some event which RTL picks up 
@@ -1638,7 +1638,22 @@ so we will give below command to upgrade
 and now we can see the user-event version is upgraded to 14   
 
 > "@testing-library/user-event": "^14.6.1",
-   
+
+Now we will write some code in **Lec38_Comp.tsx** and then its testcase in **Lec38_Comp.test.tsx** using user-event library   
+
+<ins>Lec38_Comp.tsx</ins> 
+
+```javascript
+
+```
+
+<ins>Lec38_Comp.test.tsx</ins> 
+
+```javascript
+
+```
+
+
 </p>
 </details>
 
