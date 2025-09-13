@@ -1686,10 +1686,107 @@ import userEvent from '@testing-library/user-event'
 <details>
 <summary> <ins> Lec 39: onChange Event Testing | Keyboard Interactions </ins> </summary>
 <p>
+<img width="1119" height="510" alt="image" src="https://github.com/user-attachments/assets/0f3be7f1-ef27-415d-b213-9506dd0b82ea" />
 
+<ins>Lec39_Comp.tsx</ins> 
+
+```javascript
+
+import { useState } from "react"
+
+const Lec39_Comp = () => {
+    const [name, setName] = useState('')
+    return (
+        <div>
+            <h1>Lec 39: onChange Event Testing | Keyboard Interactions</h1>
+            <h2>{name}</h2>
+            <div>
+              <input type="text" onChange={(e) => setName(e?.target?.value)} placeholder="Enter Name" />
+            </div>
+         </div>
+    )
+}
+export default Lec39_Comp
+
+```
+
+<ins>Lec39_Comp.test.tsx</ins> 
+
+```javascript
+
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec39_Comp from './Lec39_Comp'
+import userEvent from '@testing-library/user-event'
+
+ test('test onChange event with user-event library', async() => {
+   userEvent.setup()
+   render(<Lec39_Comp />)
+   const ele = screen.getByRole('textbox')
+   await userEvent.type(ele, 'abc')
+   expect(screen.getByText('abc')).toBeInTheDocument()
+ })
+
+```
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 40: act function </ins> </summary>   
+
+<p>
+<img width="832" height="379" alt="image" src="https://github.com/user-attachments/assets/70211246-51b4-49b1-82f7-8540313e65f9" />   
+
+While writing test cases for events like onClick and onChange, there are state update as well.   
+This state update is async and can cause error. To solve this we will use **act** function.   
+
+<ins>Lec40_Comp.tsx</ins> 
+
+```javascript
+import { useState } from "react"
+
+const Lec40_Comp = () => {
+    const [name, setName] = useState('')
+
+    
+    return (
+        <div>
+            <h1>Lec 40:act functions</h1>
+            <h2>{name}</h2>
+            <div>
+              <input type="text" onChange={(e) => setName(e?.target?.value)} placeholder="Enter Name" />
+            </div>
+         </div>
+    )
+}
+
+export default Lec40_Comp
+
+```
+
+<ins>Lec40_Comp.test.tsx</ins> 
+
+```javascript
+
+import {act, render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec40_Comp from './Lec40_Comp'
+import userEvent from '@testing-library/user-event'
+
+ test('test onChange event with act function', async() => {
+   userEvent.setup()
+   render(<Lec40_Comp />)
+   const ele = screen.getByRole('textbox')
+   await act(async() => {
+    await userEvent.type(ele, 'xyz')
+   }) 
+   expect(screen.getByText('xyz')).toBeInTheDocument()
+ })
+
+```
+
+</p>
+</details>
 
 
 
