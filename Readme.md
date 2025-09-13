@@ -1789,6 +1789,61 @@ import userEvent from '@testing-library/user-event'
 </details>
 
 
+<details>
+<summary> <ins> Lec 41: Test component Props </ins> </summary>   
+<p>
+<img width="1121" height="520" alt="image" src="https://github.com/user-attachments/assets/64a45085-3afc-46e7-86cf-46bf889df241" />   
+
+<ins>Lec41_User_Comp.tsx</ins> 
+
+```javascript
+const Lec41_User_Comp = (props:any) => {
+  return (
+    <div>
+      <h1>Username is:{props?.name}</h1>
+    </div>
+  )
+}
+export default Lec41_User_Comp
+```
+<ins>Lec41_Comp.tsx</ins> 
+
+```javascript
+import Lec41_User_Comp from "./Lec41_User_Comp"
+
+const Lec41_Comp = () => {
+    return (
+        <div>
+            <h1>Lec 41: Prop Testing</h1>
+            <hr />
+            <Lec41_User_Comp name='abcd'/>
+         </div>
+    )
+}
+export default Lec41_Comp
+```
+
+<ins>Lec41_Comp.test.tsx</ins> 
+
+```javascript
+
+import {render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec41_User_Comp from './Lec41_User_Comp'
+
+ test('Props Testing', () => {
+  const name= 'swatantra'
+   render(<Lec41_User_Comp name={name} />)
+   const userName = screen.getByText(`Username is:${name}`)
+   expect(userName).toBeInTheDocument()
+ })
+
+```
+
+</p>
+</details>
+
+
 
 
 
