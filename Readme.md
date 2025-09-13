@@ -1839,9 +1839,49 @@ import Lec41_User_Comp from './Lec41_User_Comp'
  })
 
 ```
-
 </p>
 </details>
+
+<details>
+<summary> <ins> Lec 42: Functional Props Testing and Function Mocking </ins> </summary>   
+<p>
+<img width="821" height="382" alt="image" src="https://github.com/user-attachments/assets/df11433f-bb58-4615-a947-6ce1d71327ad" />   
+
+<ins>Lec42_Comp.tsx</ins> 
+```javascript
+const Lec42_Comp = (props:any) => {
+    return (
+        <div>
+            <h1>Lec 42: Functional Props Testing and Function Mocking</h1>
+            <button onClick={props?.testFunc}>Click</button>
+         </div>
+    )
+}
+export default Lec42_Comp
+```
+
+<ins>Lec42_Comp.test.tsx</ins> 
+
+```javascript
+import { render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec42_Comp from './Lec42_Comp'
+import userEvent from '@testing-library/user-event'
+
+ test('test onChange event with act function', async() => {
+  const testFunc = jest.fn()
+  userEvent.setup()
+   render(<Lec42_Comp testFunc={testFunc}/>)
+   const btn = screen.getByRole('button')
+   await userEvent.click(btn)
+   expect(testFunc).toBeCalled()
+ })
+```
+
+</p>
+
+</details>
+
 
 
 
