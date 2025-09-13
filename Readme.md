@@ -1683,6 +1683,13 @@ import userEvent from '@testing-library/user-event'
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 39: onChange Event Testing | Keyboard Interactions </ins> </summary>
+<p>
+
+</p>
+</details>
+
 
 
 
