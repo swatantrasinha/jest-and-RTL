@@ -1610,8 +1610,35 @@ import Lec37_Comp from './Lec37_Comp'
 <details>
 <summary> <ins> Lec 38: Click Event with User Event Library </ins> </summary>
 <p>
-<img width="818" height="381" alt="image" src="https://github.com/user-attachments/assets/84418738-9007-4ce0-8128-f706b8e33c12" />
+<img width="818" height="381" alt="image" src="https://github.com/user-attachments/assets/84418738-9007-4ce0-8128-f706b8e33c12" />   
 
+We have earlier seen the testing of Click event. Refer: Lec 10: Click event test case with button | event fire    
+   
+- RTL is used not only with react but also with vanilla js/vue js/angular js etc.
+  When we install react in our project,so generally we get this by default. But in other framework like vue/angular when we install RTL we get this user-event library. There are some event which RTL picks up 
+  from User-Event library. In short, user-event lib is supporting lib for RTL.
+
+- User-event lib is specially designed for user events like onClick,mouseover. Its simpler to use than fireEvent of RTL and covers wider-range of testcases.  
+
+ 
+- if we see documentation for RTL, its recommended to use user-events lib: https://testing-library.com/docs/user-event/intro   
+
+<img width="1197" height="955" alt="image" src="https://github.com/user-attachments/assets/cfd606fc-df68-44d0-be4b-2ce110cf6868" />
+
+
+Also, see the highlighted text in red which suggest to upgrade to version 14      
+In our package.json, the current version for the user-event library is:   
+
+>  "@testing-library/user-event": "^13.5.0",   
+
+so we will give below command to upgrade   
+
+> yarn add @testing-library/user-event@latest   
+
+and now we can see the user-event version is upgraded to 14   
+
+> "@testing-library/user-event": "^14.6.1",
+   
 </p>
 </details>
 
