@@ -1644,15 +1644,41 @@ Now we will write some code in **Lec38_Comp.tsx** and then its testcase in **Lec
 <ins>Lec38_Comp.tsx</ins> 
 
 ```javascript
+import { useState } from "react"
 
+const Lec38_Comp = () => {
+    const [data, setData] = useState('')
+    return (
+        <div>
+            <h1>Lec38 : Click Event with User Event Library</h1>
+            <h2>{data}</h2>
+            <div >
+               <button onClick={() => setData('Hello')}>Click Me</button>
+            </div>
+         </div>
+    )
+}
+export default Lec38_Comp
 ```
 
 <ins>Lec38_Comp.test.tsx</ins> 
 
 ```javascript
 
-```
+import {render, screen, within} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Lec38_Comp from './Lec38_Comp'
+import userEvent from '@testing-library/user-event'
 
+ test('test click event with user-event library', async() => {
+   userEvent.setup()
+   render(<Lec38_Comp />)
+   const btn = screen.getByText('Click Me')
+   await userEvent.click(btn)
+   expect(screen.getByText('Hello')).toBeInTheDocument()
+ })
+
+```
 
 </p>
 </details>
