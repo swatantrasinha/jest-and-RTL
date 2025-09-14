@@ -1945,7 +1945,68 @@ We can then hover over element in DOM to see the details like roles, labelText, 
 <summary> <ins> Lec 45: What is MSW | Mock Service worker </ins> </summary>   
 
 <p>
+<img width="1112" height="499" alt="image" src="https://github.com/user-attachments/assets/529f5989-dfe3-4c4d-aad8-dd6940672d9b" />   
 
+</p>
+</details>
+
+
+<details>
+<summary> <ins> Lec 46: API Call for Testing </ins> </summary>   
+<p>
+We wil do API calling in this lecture and then we will test it using MSW in next lecture   
+
+<ins>Lec46_Comp.tsx</ins> 
+
+```javascript
+
+import { useEffect, useState } from "react"
+
+type UserDataType= {
+  id: number,
+  name: string,
+  username: string,
+  email: string,
+  phone: string,
+}
+
+const Lec46_Comp = () => {
+    const [data, setData] = useState<UserDataType[] | null>(null)
+    
+    useEffect(() => {
+      getData()
+    }, [])
+
+    const getData = async() => {
+      const response = await fetch('https://jsonplaceholder.typicode.com/users')
+      const result = await response.json() as UserDataType[]
+      console.log('result : ' , result)
+      if(result) {
+        setData(result)
+      }
+    }
+
+    
+    return (
+        <div>
+            <h1>Lec 46: API Call for Testing</h1>
+            <h2>List Of Users:</h2>
+            {data && (
+              <ul>
+                {data?.map((user: UserDataType) => (
+                  <li key={user?.id}>{user?.name}</li>
+                ))}
+              </ul>
+            )}
+            
+         </div>
+    )
+}
+
+export default Lec46_Comp
+
+```
+ 
 </p>
 </details>
 
