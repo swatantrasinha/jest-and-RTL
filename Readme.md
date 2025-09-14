@@ -1919,7 +1919,7 @@ We can give below command:
 
 > DEBUG_PRINT_LIMIT=10000 npm run test 
 
-5. logRoles   
+5. logRoles: it helps in identifying elements in DOM clearly         
 
 ```javascript
 const {container} = render(<Lec43_Comp />)
