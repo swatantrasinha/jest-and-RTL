@@ -9,10 +9,14 @@ This is course for learning how to write testcase using jest and RTL.
     <img width="944" height="599" alt="image" src="https://github.com/swatantrasinha/jest-and-RTL/blob/main/screenshots/001-type_Of_Testing.png" />
 </details>
 
+<hr/>
+
 <details>
     <summary> <ins> Our Focus Area </ins> </summary>
     <img width="944" height="599" alt="image" src="https://github.com/swatantrasinha/jest-and-RTL/blob/main/screenshots/002-Our_Focus_Area.png" />
 </details>
+
+<hr/>
 
 <details>
     <summary> <ins>Lecture 03: Write Basic Test Case</ins> </summary>
@@ -39,6 +43,7 @@ test('testing for sum function', () => {
 ```
 </details>
 
+<hr/>
 
 <details>
     <summary> <ins>Lecture 04: Understand React Test Structure </ins> </summary>
@@ -84,6 +89,7 @@ test('renders learn react link', () => {
 ```
 </details>
 
+<hr/>
 
 <details>
     <summary> <ins>Lecture 05: Write First React Testcase </ins> </summary>
@@ -126,6 +132,8 @@ test('renders learn react link', () => {
     
 </p>
 </details>
+
+<hr/>
 
 <details>
     <summary> <ins>Lecture 06: Test Input box </ins> </summary>
@@ -171,6 +179,7 @@ test('renders learn react link', () => {
 
 </details>    
 
+<hr/>
 
 <details>
     <summary> <ins> Lec 07: Test Case Run Options </ins></summary>
@@ -188,7 +197,7 @@ It shows options like
 
 </details>
 
-
+<hr/>
 
 <details>
 <summary> <ins> Lec 08: Test grouping with describe function </ins></summary>
@@ -210,6 +219,7 @@ It shows options like
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 09: Test on change event | event fire </ins></summary>
@@ -253,6 +263,7 @@ test('onChange event testing', () => {
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 10: Click event test case with button | event fire </ins></summary>
@@ -296,6 +307,8 @@ test('click event testing', () => {
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 11: File and Folder naming convention </ins></summary>
 <p> 
@@ -309,6 +322,7 @@ test('click event testing', () => {
   
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 12: beforeEach | beforeAll | afterAll | afterEach hooks </ins></summary>
@@ -328,6 +342,8 @@ test('click event testing', () => {
     
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 13: Snapshot Testing | update Snapshots </ins></summary>
@@ -378,6 +394,8 @@ If we give this command and run test case again it will pass
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 14: Important points | What we should test </ins></summary>
 <p>
@@ -398,6 +416,7 @@ If we give this command and run test case again it will pass
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 15: Class Component Method Testing </ins></summary>
@@ -407,6 +426,7 @@ If we give this command and run test case again it will pass
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 16: Functional Component method testing </ins></summary>
@@ -448,7 +468,7 @@ const handleOtherMethod = () => {
 export default handleOtherMethod;
 ```
 
-<hr/>
+-------------
 
 <ins>Lec16_Comp.test.tsx</ins>
 
@@ -479,6 +499,8 @@ Note:
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 17: RTL Query </ins></summary>
 <p> 
@@ -493,6 +515,8 @@ Note:
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 18: getByRole Query </ins></summary>
 <p> 
@@ -504,6 +528,8 @@ e.g For textbox --> screen.getByRole('textbox')
 
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 19: Multiple elements and Custom Role </ins></summary>
@@ -594,6 +620,8 @@ expect(dv1).toBeInTheDocument()
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 20: getAllByRole </ins></summary>
 <p>
@@ -657,6 +685,9 @@ import Lec20_Comp from './Lec20_Comp'
 </p>
 </details>
 
+<hr/>
+
+
 <details>
 <summary> <ins> Lec 21: getByLabelText - textbox and checkbox testing with get by label text </ins></summary>
 <p>
@@ -713,6 +744,8 @@ import Lec21_Comp from './Lec21_Comp'
 
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 22: getAllByLabelText with multiple elements </ins></summary>
@@ -799,6 +832,8 @@ import Lec22_Comp from './Lec22_Comp'
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 23: getByPlaceholderText and getAllByPlaceholderText </ins></summary>
 <p>
@@ -854,6 +889,9 @@ import Lec23_Comp from './Lec23_Comp'
 
 </p>
 </details>
+
+<hr/>
+
 
 <details>
 <summary> <ins> Lec 24: getByText and getAllByText </ins></summary>
@@ -920,6 +958,8 @@ import Lec24_Comp from './Lec24_Comp'
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 25: getByTestId and getAllByTestId </ins></summary>
 <p>
@@ -981,6 +1021,8 @@ It can be element-testid, component-testid etc. We will see how to use it in nex
 </p>
 </details>
 
+<hr/>
+
 
 <details>
 <summary> <ins> Lec 26: Overriding data-testid </ins></summary>
@@ -1021,6 +1063,8 @@ configure({testIdAttribute: 'element-id'})
 ```
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 27: getByDisplayValue and getAllByDisplayValue </ins></summary>
@@ -1094,6 +1138,7 @@ test('textArea - testing using getByDisplayValue', () => {
 ```
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 28: getByTitle and getAllByTitle </ins></summary>
@@ -1158,6 +1203,7 @@ configure({testIdAttribute: 'element-id'})
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 29: getByAltText and getAllByAltText </ins></summary>
@@ -1213,6 +1259,8 @@ configure({testIdAttribute: 'element-id'})
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 30: Priority Order for RTL Queries </ins></summary>
 <p>
@@ -1224,7 +1272,7 @@ The priority order is same as mentioned in the offocial docs of RTL. See below :
 </p>
 </details>
 
-
+<hr/>
 
 
  <details>
@@ -1291,8 +1339,9 @@ configure({testIdAttribute: 'element-id'})
 
 </details>
 
+<hr/>
 
- <details>
+<details>
 <summary> <ins> Lec 32:  TextMatch with String and Regex </ins> </summary>
 <p> 
 <img width="829" height="332" alt="image" src="https://github.com/user-attachments/assets/0f55dce2-4fbe-4f1c-b117-260980a5648b" />   
@@ -1358,6 +1407,8 @@ configure({testIdAttribute: 'element-id'})
 
 </details>
 
+<hr/>
+
  <details>
 <summary> <ins> Lec 33:  TextMatch with Function </ins> </summary>
 <p>    
@@ -1405,6 +1456,8 @@ configure({testIdAttribute: 'element-id'})
 
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 34:  QueryBy and QueryAllBy | Test hidden elements </ins> </summary>
@@ -1457,6 +1510,8 @@ import Lec34_Comp from './Lec34_Comp'
 ```
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 35:  findBy and findAllBy | test async elements </ins> </summary>
@@ -1520,6 +1575,7 @@ import Lec35_Comp from './Lec35_Comp'
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 36:  Test Elements with JavaScript Query | Custom Query </ins> </summary>
@@ -1562,6 +1618,8 @@ import Lec36_Comp from './Lec36_Comp'
 
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 37: Querying Within Elements </ins> </summary>
@@ -1606,6 +1664,8 @@ import Lec37_Comp from './Lec37_Comp'
     
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 38: Click Event with User Event Library </ins> </summary>
@@ -1683,6 +1743,8 @@ import userEvent from '@testing-library/user-event'
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 39: onChange Event Testing | Keyboard Interactions </ins> </summary>
 <p>
@@ -1730,6 +1792,8 @@ import userEvent from '@testing-library/user-event'
 ```
 </p>
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 40: act function </ins> </summary>   
@@ -1788,6 +1852,7 @@ import userEvent from '@testing-library/user-event'
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 41: Test component Props </ins> </summary>   
@@ -1842,6 +1907,8 @@ import Lec41_User_Comp from './Lec41_User_Comp'
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 42: Functional Props Testing and Function Mocking </ins> </summary>   
 <p>
@@ -1881,6 +1948,8 @@ import userEvent from '@testing-library/user-event'
 </p>
 
 </details>
+
+<hr/>
 
 <details>
 <summary> <ins> Lec 43: Debugging in React testing library </ins> </summary>   
@@ -1930,6 +1999,8 @@ logRoles(container)
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 44: Testing playground chrome extension </ins> </summary>   
 <p>
@@ -1941,6 +2012,8 @@ We can then hover over element in DOM to see the details like roles, labelText, 
 </p>
 </details>
 
+<hr/>
+
 <details>
 <summary> <ins> Lec 45: What is MSW | Mock Service worker </ins> </summary>   
 
@@ -1950,6 +2023,7 @@ We can then hover over element in DOM to see the details like roles, labelText, 
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 46: API Call for Testing </ins> </summary>   
@@ -2010,6 +2084,7 @@ export default Lec46_Comp
 </p>
 </details>
 
+<hr/>
 
 <details>
 <summary> <ins> Lec 47: API test with MSW </ins> </summary>   
