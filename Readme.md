@@ -2095,6 +2095,15 @@ We did API calling in the previous lecture-46 and now in this lecture, we will t
 
 <ins>Lec47_Comp.test.tsx</ins> 
 
+1. install MSW   
+
+> yarn add msw --dev
+
+2. inside **src** create a new folder **mockServices** and add two files
+- server.js
+- handlers.js
+
+
 ```javascript
 
 ```
