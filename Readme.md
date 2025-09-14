@@ -1882,7 +1882,54 @@ import userEvent from '@testing-library/user-event'
 
 </details>
 
+<details>
+<summary> <ins> Lec 43: Debugging in React testing library </ins> </summary>   
+<p>
+<img width="818" height="438" alt="image" src="https://github.com/user-attachments/assets/bb8dbdbc-d291-45ff-8bce-d257d7a78bc0" />   
 
+1. Automatic debudding : Its there by default. It shows text in red where the testcase mismatches and failed.   
+
+2. prettyDom: To print the html content in terminal we can do :
+
+```javascript
+const {container} = render(<Lec43_Comp />)
+console.log(container)
+```
+
+The above will print the content of DOM but the HTML is not readable.    
+For this we can use **prettyDom** method as below:   
+
+```javascript
+const {container} = render(<Lec43_Comp />)
+console.log(prettyDOM(container))
+```
+
+<img width="885" height="662" alt="image" src="https://github.com/user-attachments/assets/503eab6a-8e43-4922-9f73-801cc7b832d4" />
+
+
+3. debug: this will also display contents of DOM in readable format   
+
+```javascript
+const {debug} = render(<Lec43_Comp />)
+debug()
+```
+
+4. DEBUG_PRINT_LIMIT: By default, the number of lines to be printed is around 7000, for debugging purpose we can increase it to 10000
+We can give below command:
+
+> DEBUG_PRINT_LIMIT=10000 npm run test 
+
+5. logRoles   
+
+```javascript
+const {container} = render(<Lec43_Comp />)
+logRoles(container)
+```
+<img width="877" height="633" alt="image" src="https://github.com/user-attachments/assets/575408ba-5854-47d9-b1b9-df3855fd53d8" />   
+
+
+</p>
+</details>
 
 
 
