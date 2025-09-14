@@ -1927,10 +1927,27 @@ logRoles(container)
 ```
 <img width="877" height="633" alt="image" src="https://github.com/user-attachments/assets/575408ba-5854-47d9-b1b9-df3855fd53d8" />   
 
+</p>
+</details>
+
+<details>
+<summary> <ins> Lec 44: Testing playground chrome extension </ins> </summary>   
+<p>
+<img width="829" height="334" alt="image" src="https://github.com/user-attachments/assets/64f4225b-a37d-4127-923b-3cf61fc126f4" />   
+
+**Testing playground** is chrome extension. We need to first install it and to use we need to right click -> inspect  and then go to Testing Playground tab.    
+We can then hover over element in DOM to see the details like roles, labelText, altText etc
 
 </p>
 </details>
 
+<details>
+<summary> <ins> Lec 45: What is MSW | Mock Service worker </ins> </summary>   
+
+<p>
+
+</p>
+</details>
 
 
 
