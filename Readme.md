@@ -2011,6 +2011,19 @@ export default Lec46_Comp
 </details>
 
 
+<details>
+<summary> <ins> Lec 46: API Call for Testing </ins> </summary>   
+<p>
+We did API calling in the previous lecture-46 and now in this lecture, we will test it using MSW.  
+
+<ins>Lec47_Comp.test.tsx</ins> 
+
+```javascript
+
+```
+</details>
+
+
 
 
 
